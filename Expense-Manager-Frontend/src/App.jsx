@@ -1,0 +1,14 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Login from "./LoginPage/Login";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Login />} />
+    </Routes>
+  );
+}
+
+export default App;
