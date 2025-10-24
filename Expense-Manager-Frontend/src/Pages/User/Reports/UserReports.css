@@ -1,12 +1,12 @@
-.reports {
+.user-reports {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   font-family: "Inter", sans-serif;
 }
 
-/* ========== HEADER ========== */
-.section-header {
+/* HEADER */
+.user-section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,21 +15,21 @@
   gap: 15px;
 }
 
-.section-header h1 {
+.user-section-header h1 {
   color: #2c3e50;
   margin: 0;
   font-size: 28px;
   font-weight: 700;
 }
 
-.report-controls {
+.user-report-controls {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.report-controls select,
-.report-controls button {
+.user-report-controls select,
+.user-report-controls button {
   padding: 10px 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -39,50 +39,41 @@
   transition: all 0.3s ease;
 }
 
-.report-controls select {
-  background-color: white;
-  color: #2c3e50;
-}
-
-.report-controls select:focus {
-  outline: none;
-  border-color: #667eea;
-}
-
-.btn-secondary {
+.user-btn-secondary {
   background-color: #95a5a6;
   color: white;
   border: none;
 }
 
-.btn-secondary:hover {
+.user-btn-secondary:hover {
   background-color: #7f8c8d;
 }
 
-/* ========== REPORT SECTION ========== */
-.report-section {
+/* SECTIONS */
+.user-report-section {
   background: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+  animation: fadeIn 0.4s ease;
 }
 
-.report-section h2 {
-  margin: 0 0 20px 0;
+.user-report-section h2 {
+  margin-bottom: 20px;
   color: #2c3e50;
   font-size: 18px;
   font-weight: 600;
 }
 
-/* ========== SUMMARY CARDS ========== */
-.summary-cards {
+/* CARDS */
+.user-summary-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.summary-card {
+.user-summary-card {
   padding: 20px;
   border-radius: 8px;
   color: white;
@@ -90,43 +81,40 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.summary-card:hover {
+.user-summary-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.summary-card.income {
+.user-income {
   background: linear-gradient(135deg, #27ae60, #2ecc71);
 }
 
-.summary-card.expense {
+.user-expense {
   background: linear-gradient(135deg, #e74c3c, #ec7063);
 }
 
-.summary-card.balance {
+.user-balance {
   background: linear-gradient(135deg, #3498db, #5dade2);
 }
 
-.summary-card h3 {
-  margin: 0 0 10px 0;
+.user-summary-card h3 {
   font-size: 14px;
-  font-weight: 600;
   opacity: 0.9;
 }
 
-.summary-card .amount {
-  margin: 0;
+.user-amount {
   font-size: 28px;
   font-weight: 700;
 }
 
-/* ========== TABLES ========== */
-.report-table {
+/* TABLE */
+.user-report-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.report-table th {
+.user-report-table th {
   background-color: #f5f5f5;
   padding: 12px;
   text-align: left;
@@ -135,18 +123,18 @@
   border-bottom: 2px solid #ecf0f1;
 }
 
-.report-table td {
+.user-report-table td {
   padding: 12px;
   border-bottom: 1px solid #ecf0f1;
   color: #555;
 }
 
-.report-table tr:hover {
+.user-report-table tr:hover {
   background-color: #f9f9f9;
 }
 
-/* ========== PROGRESS BAR ========== */
-.progress-bar {
+/* PROGRESS BAR */
+.user-progress-bar {
   display: inline-block;
   width: 100px;
   height: 8px;
@@ -154,50 +142,38 @@
   border-radius: 4px;
   overflow: hidden;
   margin-right: 10px;
-  vertical-align: middle;
 }
 
-.progress-fill {
+.user-progress-fill {
   height: 100%;
   background-color: #667eea;
   transition: width 0.4s ease;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .section-header {
+  .user-section-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .report-controls {
+  .user-report-controls {
     width: 100%;
     flex-direction: column;
   }
 
-  .report-controls select,
-  .report-controls button {
+  .user-report-controls select,
+  .user-report-controls button {
     width: 100%;
   }
 
-  .summary-cards {
+  .user-summary-cards {
     grid-template-columns: 1fr;
   }
 }
 
-/* ========== ANIMATIONS ========== */
+/* ANIMATION */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.report-section,
-.summary-card {
-  animation: fadeIn 0.4s ease;
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

@@ -1,21 +1,21 @@
-.project-management {
+.admin-project-management {
   max-width: 1200px;
 }
 
-.section-header {
+.admin-section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.section-header h1 {
+.admin-section-header h1 {
   color: #2c3e50;
   margin: 0;
   font-size: 28px;
 }
 
-.project-form {
+.admin-project-form {
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -23,11 +23,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
+.admin-form-group {
   margin-bottom: 15px;
 }
 
-.form-group label {
+.admin-form-group label {
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
@@ -35,8 +35,8 @@
   font-size: 14px;
 }
 
-.form-group input,
-.form-group select {
+.admin-form-group input,
+.admin-form-group select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -45,20 +45,20 @@
   font-family: inherit;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.admin-form-group input:focus,
+.admin-form-group select:focus {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-.projects-grid {
+.admin-projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.project-card {
+.admin-project-card {
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -66,24 +66,24 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-card:hover {
+.admin-project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-.project-card h3 {
+.admin-project-card h3 {
   margin: 0 0 10px 0;
   color: #2c3e50;
   font-size: 18px;
 }
 
-.project-card .department {
+.admin-department {
   color: #7f8c8d;
   font-size: 14px;
   margin: 0 0 15px 0;
 }
 
-.budget-info {
+.admin-budget-info {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -91,7 +91,7 @@
   color: #555;
 }
 
-.progress-bar {
+.admin-progress-bar {
   width: 100%;
   height: 8px;
   background-color: #ecf0f1;
@@ -99,13 +99,13 @@
   overflow: hidden;
 }
 
-.progress-fill {
+.admin-progress-fill {
   height: 100%;
   background-color: #667eea;
   transition: width 0.3s;
 }
 
-.btn-primary {
+.admin-btn-primary {
   padding: 10px 20px;
   background-color: #667eea;
   color: white;
@@ -116,6 +116,6 @@
   transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
+.admin-btn-primary:hover {
   background-color: #5568d3;
 }

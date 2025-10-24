@@ -1,21 +1,21 @@
-.category-management {
+.admin-category-management {
   max-width: 1200px;
 }
 
-.section-header {
+.admin-section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.section-header h1 {
+.admin-section-header h1 {
   color: #2c3e50;
   margin: 0;
   font-size: 28px;
 }
 
-.category-form {
+.admin-category-form {
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -23,11 +23,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
+.admin-form-group {
   margin-bottom: 15px;
 }
 
-.form-group label {
+.admin-form-group label {
   display: block;
   margin-bottom: 8px;
   font-weight: 600;
@@ -35,8 +35,8 @@
   font-size: 14px;
 }
 
-.form-group input,
-.form-group select {
+.admin-form-group input,
+.admin-form-group select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -45,20 +45,20 @@
   font-family: inherit;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.admin-form-group input:focus,
+.admin-form-group select:focus {
   outline: none;
   border-color: #667eea;
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
-.categories-grid {
+.admin-categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.category-card {
+.admin-category-card {
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -66,24 +66,24 @@
   transition: transform 0.3s;
 }
 
-.category-card:hover {
+.admin-category-card:hover {
   transform: translateY(-5px);
 }
 
-.category-header {
+.admin-category-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
 }
 
-.category-header h3 {
+.admin-category-header h3 {
   margin: 0;
   color: #2c3e50;
   font-size: 18px;
 }
 
-.type-badge {
+.admin-type-badge {
   display: inline-block;
   padding: 4px 12px;
   border-radius: 20px;
@@ -91,45 +91,45 @@
   font-weight: 600;
 }
 
-.type-badge.expense {
+.admin-type-badge.expense {
   background-color: #ffe6e6;
   color: #c33;
 }
 
-.type-badge.income {
+.admin-type-badge.income {
   background-color: #e6ffe6;
   color: #3c3;
 }
 
-.subcategories {
+.admin-subcategories {
   margin-top: 15px;
 }
 
-.subcategories h4 {
+.admin-subcategories h4 {
   margin: 0 0 10px 0;
   color: #7f8c8d;
   font-size: 12px;
   font-weight: 600;
 }
 
-.subcategories ul {
+.admin-subcategories ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.subcategories li {
+.admin-subcategories li {
   padding: 6px 0;
   color: #555;
   font-size: 14px;
   border-bottom: 1px solid #ecf0f1;
 }
 
-.subcategories li:last-child {
+.admin-subcategories li:last-child {
   border-bottom: none;
 }
 
-.btn-primary {
+.admin-btn-primary {
   padding: 10px 20px;
   background-color: #667eea;
   color: white;
@@ -140,6 +140,6 @@
   transition: background-color 0.3s;
 }
 
-.btn-primary:hover {
+.admin-btn-primary:hover {
   background-color: #5568d3;
 }

@@ -29,17 +29,17 @@ export default function ProjectManagement() {
   };
 
   return (
-    <div className="project-management">
-      <div className="section-header">
+    <div className="admin-project-management">
+      <div className="admin-section-header">
         <h1>Project Management</h1>
-        <button className="btn-primary" onClick={() => setShowForm(!showForm)}>
+        <button className="admin-btn-primary" onClick={() => setShowForm(!showForm)}>
           {showForm ? "Cancel" : "Add Project"}
         </button>
       </div>
 
       {showForm && (
-        <form className="project-form" onSubmit={handleAddProject}>
-          <div className="form-group">
+        <form className="admin-project-form" onSubmit={handleAddProject}>
+          <div className="admin-form-group">
             <label>Project Name</label>
             <input
               type="text"
@@ -50,7 +50,7 @@ export default function ProjectManagement() {
             />
           </div>
 
-          <div className="form-group">
+          <div className="admin-form-group">
             <label>Department</label>
             <input
               type="text"
@@ -61,7 +61,7 @@ export default function ProjectManagement() {
             />
           </div>
 
-          <div className="form-group">
+          <div className="admin-form-group">
             <label>Budget</label>
             <input
               type="number"
@@ -72,24 +72,24 @@ export default function ProjectManagement() {
             />
           </div>
 
-          <button type="submit" className="btn-primary">
+          <button type="submit" className="admin-btn-primary">
             Save Project
           </button>
         </form>
       )}
 
-      <div className="projects-grid">
+      <div className="admin-projects-grid">
         {projects.map((project) => (
-          <div key={project.id} className="project-card">
+          <div key={project.id} className="admin-project-card">
             <h3>{project.name}</h3>
-            <p className="department">{project.department}</p>
-            <div className="budget-info">
+            <p className="admin-department">{project.department}</p>
+            <div className="admin-budget-info">
               <span>Budget: ₹{project.budget}</span>
               <span>Spent: ₹{project.spent}</span>
             </div>
-            <div className="progress-bar">
+            <div className="admin-progress-bar">
               <div
-                className="progress-fill"
+                className="admin-progress-fill"
                 style={{ width: `${(project.spent / project.budget) * 100}%` }}
               ></div>
             </div>

@@ -36,10 +36,10 @@ export default function Reports({ user }) {
   };
 
   return (
-    <div className="reports">
-      <div className="section-header">
+    <div className="admin-reports">
+      <div className="admin-section-header">
         <h1>Reports & Analytics</h1>
-        <div className="report-controls">
+        <div className="admin-report-controls">
           <select value={reportType} onChange={(e) => setReportType(e.target.value)}>
             <option value="summary">Summary</option>
             <option value="category">Category-wise</option>
@@ -53,38 +53,38 @@ export default function Reports({ user }) {
             <option value="year">This Year</option>
           </select>
 
-          <button className="btn-secondary" onClick={handleExportPDF}>
+          <button className="admin-btn-secondary" onClick={handleExportPDF}>
             Export PDF
           </button>
-          <button className="btn-secondary" onClick={handleExportExcel}>
+          <button className="admin-btn-secondary" onClick={handleExportExcel}>
             Export Excel
           </button>
         </div>
       </div>
 
       {reportType === "summary" && (
-        <div className="report-section">
-          <div className="summary-cards">
-            <div className="summary-card income">
+        <div className="admin-report-section">
+          <div className="admin-summary-cards">
+            <div className="admin-summary-card income">
               <h3>Total Income</h3>
-              <p className="amount">₹{reportData.totalIncome}</p>
+              <p className="admin-amount">₹{reportData.totalIncome}</p>
             </div>
-            <div className="summary-card expense">
+            <div className="admin-summary-card expense">
               <h3>Total Expense</h3>
-              <p className="amount">₹{reportData.totalExpense}</p>
+              <p className="admin-amount">₹{reportData.totalExpense}</p>
             </div>
-            <div className="summary-card balance">
+            <div className="admin-summary-card balance">
               <h3>Balance</h3>
-              <p className="amount">₹{reportData.balance}</p>
+              <p className="admin-amount">₹{reportData.balance}</p>
             </div>
           </div>
         </div>
       )}
 
       {reportType === "category" && (
-        <div className="report-section">
+        <div className="admin-report-section">
           <h2>Category-wise Expense Distribution</h2>
-          <table className="report-table">
+          <table className="admin-report-table">
             <thead>
               <tr>
                 <th>Category</th>
@@ -98,9 +98,9 @@ export default function Reports({ user }) {
                   <td>{item.category}</td>
                   <td>₹{item.amount}</td>
                   <td>
-                    <div className="progress-bar">
+                    <div className="admin-progress-bar">
                       <div
-                        className="progress-fill"
+                        className="admin-progress-fill"
                         style={{ width: `${item.percentage}%` }}
                       ></div>
                     </div>
@@ -114,9 +114,9 @@ export default function Reports({ user }) {
       )}
 
       {reportType === "project" && (
-        <div className="report-section">
+        <div className="admin-report-section">
           <h2>Project-wise Income & Expense Summary</h2>
-          <table className="report-table">
+          <table className="admin-report-table">
             <thead>
               <tr>
                 <th>Project</th>
@@ -140,9 +140,9 @@ export default function Reports({ user }) {
       )}
 
       {reportType === "monthly" && (
-        <div className="report-section">
+        <div className="admin-report-section">
           <h2>Monthly Statistics</h2>
-          <table className="report-table">
+          <table className="admin-report-table">
             <thead>
               <tr>
                 <th>Month</th>

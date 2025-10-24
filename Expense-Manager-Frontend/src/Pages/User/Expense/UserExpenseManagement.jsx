@@ -46,18 +46,18 @@ export default function ExpenseManagement({ user }) {
   };
 
   return (
-    <div className="expense-management">
-      <div className="section-header">
+    <div className="user-expense-management">
+      <div className="user-section-header">
         <h1>Expense Management</h1>
-        <button className="btn-primary" onClick={() => setShowForm(!showForm)}>
+        <button className="user-btn-primary" onClick={() => setShowForm(!showForm)}>
           {showForm ? "Cancel" : "Add Expense"}
         </button>
       </div>
 
       {showForm && (
-        <form className="expense-form" onSubmit={handleAddExpense}>
-          <div className="form-row">
-            <div className="form-group">
+        <form className="user-expense-form" onSubmit={handleAddExpense}>
+          <div className="user-form-row">
+            <div className="user-form-group">
               <label>Date</label>
               <input
                 type="date"
@@ -67,7 +67,7 @@ export default function ExpenseManagement({ user }) {
               />
             </div>
 
-            <div className="form-group">
+            <div className="user-form-group">
               <label>Category</label>
               <select
                 value={formData.category}
@@ -82,7 +82,7 @@ export default function ExpenseManagement({ user }) {
               </select>
             </div>
 
-            <div className="form-group">
+            <div className="user-form-group">
               <label>Subcategory</label>
               <input
                 type="text"
@@ -93,8 +93,8 @@ export default function ExpenseManagement({ user }) {
             </div>
           </div>
 
-          <div className="form-row">
-            <div className="form-group">
+          <div className="user-form-row">
+            <div className="user-form-group">
               <label>Project</label>
               <select
                 value={formData.project}
@@ -107,7 +107,7 @@ export default function ExpenseManagement({ user }) {
               </select>
             </div>
 
-            <div className="form-group">
+            <div className="user-form-group">
               <label>Amount</label>
               <input
                 type="number"
@@ -119,7 +119,7 @@ export default function ExpenseManagement({ user }) {
             </div>
           </div>
 
-          <div className="form-group">
+          <div className="user-form-group">
             <label>Remarks</label>
             <textarea
               value={formData.remarks}
@@ -129,7 +129,7 @@ export default function ExpenseManagement({ user }) {
             ></textarea>
           </div>
 
-          <div className="form-group">
+          <div className="user-form-group">
             <label>Attachment (Bill/Receipt)</label>
             <input
               type="file"
@@ -138,13 +138,13 @@ export default function ExpenseManagement({ user }) {
             />
           </div>
 
-          <button type="submit" className="btn-primary">
+          <button type="submit" className="user-btn-primary">
             Save Expense
           </button>
         </form>
       )}
 
-      <table className="expenses-table">
+      <table className="user-expenses-table">
         <thead>
           <tr>
             <th>Date</th>
@@ -162,7 +162,7 @@ export default function ExpenseManagement({ user }) {
               <td>₹{expense.amount}</td>
               <td>{expense.project}</td>
               <td>
-                <span className={`badge ${expense.status}`}>{expense.status}</span>
+                <span className={`user-badge ${expense.status}`}>{expense.status}</span>
               </td>
             </tr>
           ))}

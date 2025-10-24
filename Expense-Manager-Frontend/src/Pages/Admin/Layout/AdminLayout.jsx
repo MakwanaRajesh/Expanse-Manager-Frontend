@@ -9,7 +9,7 @@ import {
   FaSignOutAlt,
   FaUserCircle,
 } from "react-icons/fa";
-import "./AdminLayout.css"; 
+import "./AdminLayout.css";
 
 const AdminLayout = () => {
   const navigate = useNavigate();
@@ -28,25 +28,23 @@ const AdminLayout = () => {
     { label: "Reports", href: "/admin/reports", icon: <FaChartBar /> },
   ];
 
-
   const userName = JSON.parse(localStorage.getItem("user"))?.name || "Admin";
 
   return (
-    <div className="admin-layout">
-      {/* --- Sidebar --- */}
-      <aside className="admin-sidebar">
-        <div className="admin-sidebar-header">
+    <div className="ad-layout">
+      <aside className="ad-sidebar">
+        <div className="ad-sidebar-header">
           <h2>Expense Manager</h2>
         </div>
 
-        <nav className="admin-sidebar-nav">
+        <nav className="ad-sidebar-nav">
           {adminMenuItems.map((item) => (
             <NavLink
               key={item.href}
               to={item.href}
               end={item.href === "/admin"}
               className={({ isActive }) =>
-                isActive ? "nav-item active" : "nav-item"
+                isActive ? "ad-nav-item active" : "ad-nav-item"
               }
             >
               {item.icon}
@@ -55,21 +53,19 @@ const AdminLayout = () => {
           ))}
         </nav>
 
-        <div className="admin-sidebar-footer">
-          <div className="admin-user-info">
-            <FaUserCircle className="admin-user-avatar" />
+        <div className="ad-sidebar-footer">
+          <div className="ad-user-info">
+            <FaUserCircle className="ad-user-avatar" />
             <span>{userName}</span>
           </div>
-          <button onClick={handleLogout} className="admin-btn-logout">
+          <button onClick={handleLogout} className="ad-btn-logout">
             <FaSignOutAlt />
             <span>Logout</span>
           </button>
         </div>
       </aside>
 
-      {/* --- Main Content Area --- */}
-      <main className="admin-main-content">
-        {/* The Outlet renders the matched child route's component here */}
+      <main className="ad-main-content">
         <Outlet />
       </main>
     </div>

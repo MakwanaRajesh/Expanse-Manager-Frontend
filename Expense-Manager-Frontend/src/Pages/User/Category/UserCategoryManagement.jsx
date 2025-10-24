@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./UserCategoryManagement.css";
 
-export default function CategoryManagement() {
+export default function UserCategoryManagement() {
   const [categories, setCategories] = useState([
     { id: 1, name: "Travel", type: "expense", subcategories: ["Taxi", "Train", "Bus", "Flight"] },
     { id: 2, name: "Food", type: "expense", subcategories: ["Lunch", "Dinner", "Snacks"] },
@@ -10,7 +10,6 @@ export default function CategoryManagement() {
 
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ name: "", type: "expense", subcategory: "" });
-  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const handleAddCategory = (e) => {
     e.preventDefault();
@@ -29,26 +28,18 @@ export default function CategoryManagement() {
     }
   };
 
-  const handleAddSubcategory = (categoryId, subcategoryName) => {
-    setCategories(
-      categories.map((cat) =>
-        cat.id === categoryId ? { ...cat, subcategories: [...cat.subcategories, subcategoryName] } : cat
-      )
-    );
-  };
-
   return (
-    <div className="category-management">
-      <div className="section-header">
+    <div className="user-category-management">
+      <div className="user-section-header">
         <h1>Category Management</h1>
-        <button className="btn-primary" onClick={() => setShowForm(!showForm)}>
+        <button className="user-btn-primary" onClick={() => setShowForm(!showForm)}>
           {showForm ? "Cancel" : "Add Category"}
         </button>
       </div>
 
       {showForm && (
-        <form className="category-form" onSubmit={handleAddCategory}>
-          <div className="form-group">
+        <form className="user-category-form" onSubmit={handleAddCategory}>
+          <div className="user-form-group">
             <label>Category Name</label>
             <input
               type="text"
@@ -59,7 +50,7 @@ export default function CategoryManagement() {
             />
           </div>
 
-          <div className="form-group">
+          <div className="user-form-group">
             <label>Type</label>
             <select value={formData.type} onChange={(e) => setFormData({ ...formData, type: e.target.value })}>
               <option value="expense">Expense</option>
@@ -67,7 +58,7 @@ export default function CategoryManagement() {
             </select>
           </div>
 
-          <div className="form-group">
+          <div className="user-form-group">
             <label>First Subcategory (Optional)</label>
             <input
               type="text"
@@ -77,20 +68,23 @@ export default function CategoryManagement() {
             />
           </div>
 
-          <button type="submit" className="btn-primary">
+          <button type="submit" className="user-btn-primary">
             Save Category
           </button>
         </form>
       )}
 
-      <div className="categories-grid">
+      <div className="user-categories-grid">
         {categories.map((category) => (
-          <div key={category.id} className="category-card">
-            <div className="category-header">
+          <div key={category.id} className="user-category-card">
+            <div className="user-category-header">
               <h3>{category.name}</h3>
-              <span className={`type-badge ${category.type}`}>{category.type}</span>
+              <span className={`user-type-badge user-${category.type}`}>
+                {category.type}
+              </span>
             </div>
-            <div className="subcategories">
+
+            <div className="user-subcategories">
               <h4>Subcategories:</h4>
               <ul>
                 {category.subcategories.map((sub, idx) => (

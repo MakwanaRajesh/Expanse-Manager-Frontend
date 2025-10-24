@@ -17,7 +17,6 @@ const UserLayout = () => {
     navigate("/");
   };
 
-  // User-specific sidebar menu
   const userMenuItems = [
     { label: "Dashboard", href: "/user", icon: <FaTachometerAlt /> },
     { label: "My Expenses", href: "/user/expense", icon: <FaWallet /> },
@@ -29,20 +28,19 @@ const UserLayout = () => {
 
   return (
     <div className="user-layout">
-      {/* Sidebar */}
-      <aside className="sidebar">
-        <div className="sidebar-header">
+      <aside className="user-sidebar">
+        <div className="user-sidebar-header">
           <h2>Expense Tracker</h2>
         </div>
 
-        <nav className="sidebar-nav">
+        <nav className="user-sidebar-nav">
           {userMenuItems.map((item) => (
             <NavLink
               key={item.href}
               to={item.href}
               end={item.href === "/user"}
               className={({ isActive }) =>
-                isActive ? "nav-item active" : "nav-item"
+                isActive ? "user-nav-item user-active" : "user-nav-item"
               }
             >
               {item.icon}
@@ -51,20 +49,19 @@ const UserLayout = () => {
           ))}
         </nav>
 
-        <div className="sidebar-footer">
+        <div className="user-sidebar-footer">
           <div className="user-info">
             <FaUserCircle className="user-avatar" />
             <span>{userName}</span>
           </div>
-          <button onClick={handleLogout} className="btn-logout">
+          <button onClick={handleLogout} className="user-btn-logout">
             <FaSignOutAlt />
             <span>Logout</span>
           </button>
         </div>
       </aside>
 
-      {/* Main Content */}
-      <main className="main-content">
+      <main className="user-main-content">
         <Outlet />
       </main>
     </div>

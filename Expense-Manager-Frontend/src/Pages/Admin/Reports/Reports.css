@@ -1,4 +1,4 @@
-.reports {
+.admin-reports {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -6,7 +6,7 @@
 }
 
 /* ========== HEADER ========== */
-.section-header {
+.admin-section-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,21 +15,21 @@
   gap: 15px;
 }
 
-.section-header h1 {
+.admin-section-header h1 {
   color: #2c3e50;
   margin: 0;
   font-size: 28px;
   font-weight: 700;
 }
 
-.report-controls {
+.admin-report-controls {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.report-controls select,
-.report-controls button {
+.admin-report-controls select,
+.admin-report-controls button {
   padding: 10px 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -39,28 +39,28 @@
   transition: all 0.3s ease;
 }
 
-.report-controls select {
+.admin-report-controls select {
   background-color: white;
   color: #2c3e50;
 }
 
-.report-controls select:focus {
+.admin-report-controls select:focus {
   outline: none;
   border-color: #667eea;
 }
 
-.btn-secondary {
+.admin-btn-secondary {
   background-color: #95a5a6;
   color: white;
   border: none;
 }
 
-.btn-secondary:hover {
+.admin-btn-secondary:hover {
   background-color: #7f8c8d;
 }
 
 /* ========== REPORT SECTION ========== */
-.report-section {
+.admin-report-section {
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -68,7 +68,7 @@
   margin-bottom: 20px;
 }
 
-.report-section h2 {
+.admin-report-section h2 {
   margin: 0 0 20px 0;
   color: #2c3e50;
   font-size: 18px;
@@ -76,13 +76,13 @@
 }
 
 /* ========== SUMMARY CARDS ========== */
-.summary-cards {
+.admin-summary-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-.summary-card {
+.admin-summary-card {
   padding: 20px;
   border-radius: 8px;
   color: white;
@@ -90,43 +90,43 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.summary-card:hover {
+.admin-summary-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.summary-card.income {
+.admin-summary-card.income {
   background: linear-gradient(135deg, #27ae60, #2ecc71);
 }
 
-.summary-card.expense {
+.admin-summary-card.expense {
   background: linear-gradient(135deg, #e74c3c, #ec7063);
 }
 
-.summary-card.balance {
+.admin-summary-card.balance {
   background: linear-gradient(135deg, #3498db, #5dade2);
 }
 
-.summary-card h3 {
+.admin-summary-card h3 {
   margin: 0 0 10px 0;
   font-size: 14px;
   font-weight: 600;
   opacity: 0.9;
 }
 
-.summary-card .amount {
+.admin-summary-card .admin-amount {
   margin: 0;
   font-size: 28px;
   font-weight: 700;
 }
 
 /* ========== TABLES ========== */
-.report-table {
+.admin-report-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.report-table th {
+.admin-report-table th {
   background-color: #f5f5f5;
   padding: 12px;
   text-align: left;
@@ -135,18 +135,18 @@
   border-bottom: 2px solid #ecf0f1;
 }
 
-.report-table td {
+.admin-report-table td {
   padding: 12px;
   border-bottom: 1px solid #ecf0f1;
   color: #555;
 }
 
-.report-table tr:hover {
+.admin-report-table tr:hover {
   background-color: #f9f9f9;
 }
 
 /* ========== PROGRESS BAR ========== */
-.progress-bar {
+.admin-progress-bar {
   display: inline-block;
   width: 100px;
   height: 8px;
@@ -157,7 +157,7 @@
   vertical-align: middle;
 }
 
-.progress-fill {
+.admin-progress-fill {
   height: 100%;
   background-color: #667eea;
   transition: width 0.4s ease;
@@ -165,22 +165,22 @@
 
 /* ========== RESPONSIVE DESIGN ========== */
 @media (max-width: 768px) {
-  .section-header {
+  .admin-section-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .report-controls {
+  .admin-report-controls {
     width: 100%;
     flex-direction: column;
   }
 
-  .report-controls select,
-  .report-controls button {
+  .admin-report-controls select,
+  .admin-report-controls button {
     width: 100%;
   }
 
-  .summary-cards {
+  .admin-summary-cards {
     grid-template-columns: 1fr;
   }
 }
@@ -197,7 +197,7 @@
   }
 }
 
-.report-section,
-.summary-card {
+.admin-report-section,
+.admin-summary-card {
   animation: fadeIn 0.4s ease;
 }

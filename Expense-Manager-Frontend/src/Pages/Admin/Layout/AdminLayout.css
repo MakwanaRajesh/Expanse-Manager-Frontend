@@ -1,53 +1,49 @@
-/* Ensure full screen usage */
 html, body, #root {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent body scroll */
+  overflow: hidden;
   font-family: "Inter", sans-serif;
 }
 
-/* Layout container */
-.admin-layout {
+.ad-layout {
   display: flex;
   height: 100%;
   width: 100%;
   background-color: #f4f7fa;
 }
 
-/* --- Sidebar --- */
-.admin-sidebar {
+.ad-sidebar {
   width: 260px;
   background-color: #2c3e50;
   color: #ecf0f1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; /* Full height */
+  height: 100%;
   flex-shrink: 0;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
-.admin-sidebar-header {
+.ad-sidebar-header {
   padding: 1.5rem;
   text-align: center;
   border-bottom: 1px solid #34495e;
 }
 
-.admin-sidebar-header h2 {
+.ad-sidebar-header h2 {
   margin: 0;
   font-size: 1.5rem;
   color: #fff;
 }
 
-/* Navigation */
-.admin-sidebar-nav {
+.ad-sidebar-nav {
   flex: 1;
-  overflow-y: auto; /* Scroll sidebar content if needed */
+  overflow-y: auto;
 }
 
-.admin-nav-item {
+.ad-nav-item {
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
@@ -57,43 +53,42 @@ html, body, #root {
   transition: background 0.2s;
 }
 
-.admin-nav-item svg {
+.ad-nav-item svg {
   margin-right: 0.75rem;
   font-size: 1.2rem;
 }
 
-.admin-nav-item:hover {
+.ad-nav-item:hover {
   background-color: #34495e;
   color: #fff;
 }
 
-.admin-nav-item.active {
+.ad-nav-item.active {
   background-color: #1abc9c;
   color: #fff;
   font-weight: 600;
   border-right: 4px solid #16a085;
 }
 
-/* Sidebar Footer */
-.admin-sidebar-footer {
+.ad-sidebar-footer {
   padding: 1.5rem;
   border-top: 1px solid #34495e;
 }
 
-.admin-user-info {
+.ad-user-info {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
   font-size: 0.9rem;
 }
 
-.admin-user-avatar {
+.ad-user-avatar {
   font-size: 1.5rem;
   margin-right: 0.75rem;
   color: #1abc9c;
 }
 
-.admin-btn-logout {
+.ad-btn-logout {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,16 +102,15 @@ html, body, #root {
   font-size: 1rem;
 }
 
-.admin-btn-logout svg {
+.ad-btn-logout svg {
   margin-right: 0.5rem;
 }
 
-.admin-btn-logout:hover {
+.ad-btn-logout:hover {
   background-color: #c0392b;
 }
 
-/* --- Main Content --- */
-.admin-main-content {
+.ad-main-content {
   flex: 1;
   min-height: 100%;
   height: 100%;
@@ -126,30 +120,28 @@ html, body, #root {
   box-sizing: border-box;
 }
 
-/* --- Scrollbars --- */
-.admin-sidebar-nav::-webkit-scrollbar,
-.admin-main-content::-webkit-scrollbar {
+.ad-sidebar-nav::-webkit-scrollbar,
+.ad-main-content::-webkit-scrollbar {
   width: 8px;
 }
 
-.admin-sidebar-nav::-webkit-scrollbar-thumb,
-.admin-main-content::-webkit-scrollbar-thumb {
+.ad-sidebar-nav::-webkit-scrollbar-thumb,
+.ad-main-content::-webkit-scrollbar-thumb {
   background-color: rgba(0,0,0,0.2);
   border-radius: 4px;
 }
 
-/* --- Responsive --- */
 @media (max-width: 768px) {
-  .admin-layout {
+  .ad-layout {
     flex-direction: column;
   }
 
-  .admin-sidebar {
+  .ad-sidebar {
     width: 100%;
     height: auto;
   }
 
-  .admin-main-content {
+  .ad-main-content {
     height: calc(100vh - 60px);
     padding: 1rem;
   }
